@@ -1,9 +1,9 @@
-// Write your solution in this file!
 const employee = {};
 
 function updateEmployeeWithKeyAndValue(employee, key, value){
     return {
-        ...employee,[key]: value,
+        ...employee,
+        [key]: value
     };
 }
 
@@ -14,8 +14,8 @@ function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value){
 
 function deleteFromEmployeeByKey(employee, key){
     return Object.fromEntries(
-        Object.entries(employee).filter(([k]) => k!== key)
-    );
+        Object.entries(employee).filter(([k]) => k !== key)
+    )
 }
 
 function destructivelyDeleteFromEmployeeByKey(employee, key){
